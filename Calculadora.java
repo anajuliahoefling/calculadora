@@ -100,6 +100,20 @@ public class Calculadora extends JFrame {
 				
 				cm.setValor1(num1);
 				cm.setValor2(num2);
+
+			if(cbOperacao.getSelectedIndex()==1){
+					
+				total = cm.adicao();
+				}else if(cbOperacao.getSelectedIndex()==2){
+					total = cm.subtracao();
+				}else if(cbOperacao.getSelectedIndex()==3){
+					total = cm.multiplicacao();
+				}else if(cbOperacao.getSelectedIndex()==4){
+					total = cm.divisao();
+				}else{
+					JOptionPane.showMessageDialog(null, "Não deu! Selecione uma opção.");
+				}
+				tfResult.setText(""+total);
 			}
 			public void popupMenuWillBecomeVisible(PopupMenuEvent arg0) {
 			}
