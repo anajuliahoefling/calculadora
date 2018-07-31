@@ -91,7 +91,15 @@ public class Calculadora extends JFrame {
 			public void popupMenuCanceled(PopupMenuEvent arg0) {
 			}
 			public void popupMenuWillBecomeInvisible(PopupMenuEvent arg0) {
+				double num1;
+				double num2;
+				double total=0;
 				
+				num1 = Double.parseDouble(tfNum1.getText());
+				num2 = Double.parseDouble(tfNum2.getText());
+				
+				cm.setValor1(num1);
+				cm.setValor2(num2);
 			}
 			public void popupMenuWillBecomeVisible(PopupMenuEvent arg0) {
 			}
