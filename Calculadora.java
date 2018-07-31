@@ -122,7 +122,12 @@ public class Calculadora extends JFrame {
 		JButton btnCalcular = new JButton("Calcular");
 		btnCalcular.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-
+				double num1;
+				double num2;
+				double total=0;
+				
+				num1 = Double.parseDouble(tfNum1.getText());
+				num2 = Double.parseDouble(tfNum2.getText());
 			}
 		});
 		btnCalcular.setBounds(96, 265, 89, 23);
