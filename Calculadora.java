@@ -142,6 +142,31 @@ public class Calculadora extends JFrame {
 				
 				num1 = Double.parseDouble(tfNum1.getText());
 				num2 = Double.parseDouble(tfNum2.getText());
+
+				if(cbOperacao.getSelectedIndex()==1){
+					total = num1 + num2;
+				}else if(cbOperacao.getSelectedIndex()==2){
+					total = num1 - num2;
+				}else if(cbOperacao.getSelectedIndex()==3){
+					total = num1 * num2;
+				}else if(cbOperacao.getSelectedIndex()==4){
+					total = num1 / num2;
+				}else{
+					JOptionPane.showMessageDialog(null, "Não deu! Selecione uma opção.");
+				}
+				
+				
+				if(rbadicao.isSelected()){
+					total = num1 + num2;
+				}else if(rbsubtracao.isSelected()){
+					total = num1 - num2;
+				}else if(rbmultiplicacao.isSelected()){
+					total = num1 * num2;
+				}else if(rbdivisao.isSelected()){
+					total = num1 / num2;
+				}
+				
+				tfResult.setText(""+total);
 			}
 		});
 		btnCalcular.setBounds(96, 265, 89, 23);
